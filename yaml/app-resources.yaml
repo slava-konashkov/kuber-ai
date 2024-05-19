@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: app-with-resources
+  labels:
+    app: resource-app
+spec:
+  containers:
+  - name: resource-app-container
+    image: your-app-image:latest
+    resources:
+      requests:
+        memory: "64Mi"
+        cpu: "250m"
+      limits:
+        memory: "128Mi"
+        cpu: "500m"
